@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.labo08.CafeteriaController">
+   <children><ImageView fitHeight="57.0" fitWidth="360.0" layoutX="416.0">
+         <image>
+            <Image url="@../../../img/logo.png" />
+         </image>
+      </ImageView>
+
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f3fad9" height="531.0" layoutX="10.0" layoutY="56.0" onMouseClicked="#onPolloAumento" stroke="BLACK" strokeDashOffset="50.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="100.0" strokeType="OUTSIDE" width="1180.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f89b5d" height="250.0" layoutX="20.0" layoutY="65.0" stroke="BLACK" strokeDashOffset="50.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="100.0" strokeType="OUTSIDE" width="575.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f89b5d" height="250.0" layoutX="611.0" layoutY="65.0" stroke="BLACK" strokeDashOffset="50.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="100.0" strokeType="OUTSIDE" width="575.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f89b5d" height="250.0" layoutX="20.0" layoutY="325.0" stroke="BLACK" strokeDashOffset="50.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="100.0" strokeType="OUTSIDE" width="575.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f89b5d" height="250.0" layoutX="611.0" layoutY="325.0" stroke="BLACK" strokeDashOffset="50.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="100.0" strokeType="OUTSIDE" width="575.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2fad7" height="191.0" layoutX="8.0" layoutY="598.0" stroke="BLACK" strokeDashOffset="50.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="100.0" strokeType="OUTSIDE" width="286.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2fad7" height="191.0" layoutX="309.0" layoutY="598.0" stroke="BLACK" strokeDashOffset="50.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="100.0" strokeType="OUTSIDE" width="286.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2fad7" height="195.0" layoutX="616.0" layoutY="596.0" stroke="BLACK" strokeDashOffset="50.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="100.0" strokeType="OUTSIDE" width="575.0" />
+      <Label layoutX="356.0" layoutY="616.0" text="Forma de pago">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="616.0" text="Tipo de cliente">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="642.0" layoutY="616.0" text="Nombre del cliente:">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="110.0" layoutY="71.0" text="Crepeado de papas con queso">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="193.0" layoutY="337.0" text="Alas de pollo frito">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="723.0" layoutY="71.0" text="Carnes de res deshilachada">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="789.0" layoutY="337.0" text="Vegetales al ajillo">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="135.0" fitWidth="300.0" layoutX="271.0" layoutY="111.0">
+         <image>
+            <Image url="@../../../img/capeado.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="359.0" layoutY="258.0" text="Precio: $1.25">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="125.0" text="Cantidad:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="197.0" text="Subtotal:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label id="subtotalCrepeado" fx:id="subtotalPapas" layoutX="95.0" layoutY="237.0" text="\$0.00">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="cantidadPapas" layoutX="45.0" layoutY="166.0" max="10" min="0" onMouseClicked="#onPapasAumento" />
+      <Label layoutX="665.0" layoutY="119.0" text="Cantidad:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="668.0" layoutY="191.0" text="Subtotal:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label id="subtotalCrepeado" fx:id="subtotalCarne" layoutX="688.0" layoutY="231.0" text="\$0.00">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="cantidadCarne" layoutX="638.0" layoutY="160.0" max="10" min="0" onMouseClicked="#onCarneAumento" />
+      <ImageView fitHeight="135.0" fitWidth="300.0" layoutX="858.0" layoutY="117.0">
+         <image>
+            <Image url="@../../../img/carne.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="939.0" layoutY="258.0" text="Precio: $2.25">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="359.0" layoutY="517.0" text="Precio: $1.75">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="384.0" text="Cantidad:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="456.0" text="Subtotal:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label id="subtotalCrepeado" fx:id="subtotalPollo" layoutX="95.0" layoutY="496.0" text="\$0.00">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="cantidadPollo" layoutX="45.0" layoutY="425.0" max="10" min="0" onMouseClicked="#onPolloAumento" />
+      <ImageView fitHeight="135.0" fitWidth="300.0" layoutX="271.0" layoutY="370.0">
+         <image>
+            <Image url="@../../../img/pollo.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="939.0" layoutY="517.0" text="Precio: $0.75">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="665.0" layoutY="375.0" text="Cantidad:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="668.0" layoutY="447.0" text="Subtotal:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label id="subtotalCrepeado" fx:id="subtotalVegetales" layoutX="688.0" layoutY="487.0" text="\$0.00">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="cantidadVegetales" layoutX="638.0" layoutY="416.0" max="10" min="0" onMouseClicked="#onVegetalesAumento" />
+      <ImageView fitHeight="135.0" fitWidth="300.0" layoutX="858.0" layoutY="373.0">
+         <image>
+            <Image url="@../../../img/vegetales.jpg" />
+         </image>
+      </ImageView>
+      <RadioButton fx:id="empleadoCheck" layoutX="65.0" layoutY="672.0" mnemonicParsing="false" onAction="#onEmpleadoCheck" prefHeight="25.0" prefWidth="152.0" text="Empleado">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="estudianteCheck" layoutX="65.0" layoutY="715.0" mnemonicParsing="false" onAction="#onEstudianteCheck" text="Estudiante">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="efectivoCheck" layoutX="389.0" layoutY="662.0" mnemonicParsing="false" onAction="#onEfectivoCheck" text="Efectivo">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="tarjetaCheck" layoutX="389.0" layoutY="715.0" mnemonicParsing="false" onAction="#onTarjetaCheck" text="Tarjeta">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <TextField fx:id="inputNombre" layoutX="638.0" layoutY="650.0" prefHeight="24.0" prefWidth="452.0" promptText="Nombre">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <Label fx:id="precioTotal" layoutX="638.0" layoutY="700.0" text="Total: $0.00">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="botonLimpiar" layoutX="642.0" layoutY="731.0" mnemonicParsing="false" onAction="#onClickBotonLimpiar" style="-fx-background-color: Green;" styleClass="boton" text="Limpiar">
+         <stylesheets>
+            <URL value="@../../../css/buttonStyle.css" />
+            <URL value="@../../../css/radioButtonStyle.css" />
+         </stylesheets>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="botonComprar" layoutX="747.0" layoutY="731.0" mnemonicParsing="false" onAction="#onClickBotonComprar" style="-fx-background-color: Green;" styleClass="boton" text="Comprar">
+         <stylesheets>
+            <URL value="@../../../css/buttonStyle.css" />
+            <URL value="@../../../css/radioButtonStyle.css" />
+         </stylesheets>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
